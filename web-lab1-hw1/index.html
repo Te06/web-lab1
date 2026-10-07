@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Switch theme">
+        ☾
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="hero">
+      <img
+        src="profile.jpg"
+        alt="Portrait of Pham Ngoc Thach"
+        width="400"
+        height="400">
+
+      <h1>Pham Ngoc Thach</h1>
+
+      <p>
+        Information Systems student interested in business analysis,
+        data, and AI-driven enterprise solutions.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <section class="skills-grid">
+        <article>
+          <h3>Business</h3>
+          <p>Business Analysis</p>
+          <p>Process Analysis</p>
+        </article>
+
+        <article>
+          <h3>Data</h3>
+          <p>SQL</p>
+          <p>Data Analysis</p>
+        </article>
+
+        <article>
+          <h3>Development</h3>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>JavaScript</p>
+        </article>
+      </section>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <section class="project-grid">
+        <article class="project-card">
+          <header>
+            <h3>AI-Driven B2C Marketplace</h3>
+            <span>AI</span>
+          </header>
+
+          <p>
+            A project focused on AI-driven personalization
+            for an online marketplace.
+          </p>
+
+          <footer>
+            <a href="#" aria-label="View AI-Driven B2C Marketplace project">
+              Source Code
+            </a>
+          </footer>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <h3>Business Intelligence Dashboard</h3>
+            <span>BI</span>
+          </header>
+
+          <p>
+            A dashboard project for analyzing business data
+            and supporting decision-making.
+          </p>
+
+          <footer>
+            <a href="#" aria-label="View Business Intelligence Dashboard project">
+              Source Code
+            </a>
+          </footer>
+        </article>
+      </section>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <form>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Pham Ngoc Thach. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
