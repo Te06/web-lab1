@@ -37,3 +37,54 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+const form = document.getElementById("registration-form");
+const submitButton = document.getElementById("submit-button");
+const formStatus = document.getElementById("form-status");
+
+let formState = "idle";
+
+function setFormState(state) {
+  formState = state;
+
+  if (state === "idle") {
+    submitButton.disabled = false;
+    submitButton.textContent = "Register";
+    formStatus.textContent = "Ready to register.";
+  }
+
+  if (state === "submitting") {
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+    formStatus.textContent = "Submitting your registration...";
+  }
+
+  if (state === "success") {
+    submitButton.disabled = false;
+    submitButton.textContent = "Register";
+    formStatus.textContent = "Registration successful.";
+  }
+
+  if (state === "error") {
+    submitButton.disabled = false;
+    submitButton.textContent = "Try Again";
+    formStatus.textContent = "Registration failed. Please try again.";
+  }
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  setFormState("submitting");
+
+  setTimeout(() => {
+    const isSuccess = Math.random() > 0.3;
+
+    if (isSuccess) {
+      setFormState("success");
+      form.reset();
+    } else {
+      setFormState("error");
+    }
+  }, 1000);
+});
