@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #24113d 0%, #0a0a0f 45%, #050507 100%);
+  color: #ffffff;
+}
+
+main {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.event-hero,
+.registration-section {
+  background: rgba(20, 15, 30, 0.92);
+  border: 1px solid #6d28d9;
+  border-radius: 20px;
+  padding: 2rem;
+
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.2),
+    inset 0 0 20px rgba(124, 58, 237, 0.05);
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: #c4b5fd;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.event-description {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+#countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+#countdown div {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: #111118;
+  border: 1px solid #4c1d95;
+  border-radius: 14px;
+}
+
+#countdown strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 2.2rem;
+  color: #c4b5fd;
+}
+
+#countdown span {
+  color: #a1a1aa;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #4c1d95;
+  border-radius: 10px;
+  background: #0d0d14;
+  color: #ffffff;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8b5cf6;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#form-status {
+  margin-top: 0.75rem;
+  color: #c4b5fd;
+}
+
+@media (max-width: 700px) {
+  #countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    width: min(94%, 1000px);
+    padding: 2rem 0;
+  }
+
+  #countdown {
+    grid-template-columns: 1fr;
+  }
+}
