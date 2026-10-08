@@ -75,6 +75,22 @@ function setFormState(state) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  if (formState === "submitting") {
+    return;
+  }
+
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+
+  const sanitizedName = sanitizeInput(nameInput.value);
+  const sanitizedEmail = sanitizeInput(emailInput.value);
+
+  if (!sanitizedName || !sanitizedEmail) {
+    setFormState("error");
+    formStatus.textContent = "Please enter valid information.";
+    return;
+  }
+
   setFormState("submitting");
 
   setTimeout(() => {
@@ -88,3 +104,10 @@ form.addEventListener("submit", (event) => {
     }
   }, 1000);
 });
+
+
+function sanitizeInput(value) {
+  return value
+    .trim()
+    .replace(/[<>]/g, "");
+}
